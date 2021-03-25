@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pedro's Take Away - CA3</title>
+    <link rel= "stylesheet" href= "style.css">
+    
+</head>
+<body>
+<div class = container>
+    <script src="code.js"></script>
+<form action="/action_page.php">
+<label for = "usname"> Username </label>
+<input type = "text" id="usname" name="usname" required>
+<label for = "psw"> Password </label>
+<input type = "password" id = "psw" name="psw" pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+title = "Your password must have one character especial, one number, one upper and lowercase letter and at least 8 digits." required>
+<input type = "submit" value = "Submit">
+</form>
+<div id = "message">
+<h3>Password must have:</h3>
+<p id = "letter" class = "invalid">A <b>lowercase</b>letter</p>
+<p id = "capital" class = "invalid"> A <b>capital</b>letter</p>
+<p id = "number" class = "invalid"> A <b>number </b></p>
+<p id = "length" class = "invalid">At least <b> eight </b> characteres</p>
+</div>
+</div> 
+</body>
+</html>
