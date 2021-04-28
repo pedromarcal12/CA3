@@ -24,9 +24,12 @@ input [type=submit]{
 /*Styling the container div*/
 .container{
 background-color: #f1f1f1;
-padding: 10px;
-width: 80%;
+padding: 8px;
+width: 70%;
 height: auto;
+position: fixed;
+bottom: 2;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 #message{
 display: none;
@@ -55,4 +58,41 @@ color:red;
 position: relative;
 left: -35px;
 content: "&#10006;";        
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8px;
+    background-color: #5d4954;
+    
+}
+.logo{
+color: #ccc;
+text-transform: uppercase;
+letter-spacing: 5px;
+font-size: 20px;
+}
+.burguer div {
+width: 25px;
+height: 5px;
+margin: 5px;
+background-color: white;
+}
+.burguer {
+    display: none;
+}
+@media screen and  (max-witdh:768) {
+    .nav-links{
+        position:absolute;
+        right:0px;
+        height:92vh;
+        background-color: white;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+    }
+    body{
+        display: none;
+    }
 }

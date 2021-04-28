@@ -53,3 +53,16 @@ myInput.onkeyup = function() {
     length.classList.add("invalid");
   }
 }
+ 
+var faker = require('faker'); // Faker.js library
+
+api.username = faker.internet.userName();
+api.password = faker.internet.password();
+
+$.ajax({
+  url: 'https://randomuser.me/api/',
+  dataType: 'json',
+  success: function(data) {
+    console.log(data);
+  }
+});
