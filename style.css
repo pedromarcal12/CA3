@@ -65,14 +65,15 @@ nav{
     justify-content: space-around;
     align-items: center;
     min-height: 8px;
-    background-color: #5d4954;
-    
+    background-color: rgba(0, 0, 0, 0.822);
 }
 .logo{
 color: #ccc;
 text-transform: uppercase;
 letter-spacing: 5px;
 font-size: 20px;
+position: relative;
+padding: 20px;
 }
 .burguer div {
 width: 25px;
