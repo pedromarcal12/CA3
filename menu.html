@@ -23,132 +23,157 @@
         <div class = "line2"></div>
     </div>
     </nav>
+
     <table>
-        <tr>
-            <th>Starters</th>
-            <th>Quantity</th>
-            <th>Price</th>
-        </tr>
-        <tr>
-             <td>Item A </td>
-             <td>       </td>
-             <td>       </td>
-        </tr>
-        <tr>
-         <td>Item B</td>
-        <td>       </td>
-        <td>       </td>
-        </tr>
-        <tr>
-            <td>Item C </td>
-            <td>       </td>
-            <td>       </td>
-        </tr>
-        <tr>
-            <td>Item D </td>
-            <td>       </td>
-            <td>       </td>
-        </tr>
-        <tr>
-            <td>        </td>
-            <td> Total  </td>
-            <td>   $$0  </td>
-        </tr>
-        </table>
-        <table>
             <tr>
                 <th>Main</th>
                 <th>Quantity</th>
                 <th>Price</th>
+            <tr>
+                <td>Chicken fingers</td>
+                <td>
+                    <input name="qnt_1" type="text" id="qnt_1" value="0" size="3" data-price="100"/></td>
+                <td>€100</td>
             </tr>
             <tr>
-                 <td>Item A </td>
-                 <td>       </td>
-                 <td>       </td>
+                <td>Item B</td>
+                <td><input name="qnt_2" type="text" id="qnt_2" value="0" size="3" data-price="50"/></td>
+                <td>€50</td>
             </tr>
             <tr>
-             <td>Item B</td>
-            <td>       </td>
-            <td>       </td>
+                <td>Item C</td>
+                <td><input name="qnt_3" type="text" id="qnt_3" value="0" size="3" data-price="30"/></td>
+                <td>€30</td>
             </tr>
             <tr>
-                <td>Item C </td>
-                <td>       </td>
-                <td>       </td>
+                <td>Item D</td>
+                <td><input name="qnt_4" type="text" id="qnt_4" value="0" size="3" data-price="24"/></td>
+                <td>€24</td>
             </tr>
             <tr>
-                <td>Item D </td>
-                <td>       </td>
-                <td>       </td>
+                <td class="total">&nbsp;</td>
+                <td class="total right"><strong>Total:</strong></td>
+                <td class="total"><strong>
+                        <div id="ItemsTotal">€0</div>
+                    </strong></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th>Starters</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            <tr>
+                <td>Desserts</td>
+                <td>
+                    <input name="qnt_1" type="text" id="qnt_1" value="0" size="3" data-price="100"/></td>
+                <td>€100</td>
             </tr>
             <tr>
-                <td>        </td>
-                <td> Total  </td>
-                <td>   $$0  </td>
+                <td>Petit Gatteau</td>
+                <td><input name="qnt_2" type="text" id="qnt_2" value="0" size="3" data-price="50"/></td>
+                <td>€50</td>
             </tr>
-            </table>
-            <table>
-                <tr>
-                    <th>Desserts</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                </tr>
-                <tr>
-                     <td>Item A </td>
-                     <td>       </td>
-                     <td>       </td>
-                </tr>
-                <tr>
-                 <td>Item B</td>
-                <td>       </td>
-                <td>       </td>
-                </tr>
-                <tr>
-                    <td>Item C </td>
-                    <td>       </td>
-                    <td>       </td>
-                </tr>
-                <tr>
-                    <td>Item D </td>
-                    <td>       </td>
-                    <td>       </td>
-                </tr>
-                <tr>
-                    <td>        </td>
-                    <td> Total  </td>
-                    <td>   $$0  </td>
-                </tr>
-                </table>
-                <table>
-                    <tr>
-                        <th>Drinks</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                    </tr>
-                    <tr>
-                         <td>Item A </td>
-                         <td>       </td>
-                         <td>       </td>
-                    </tr>
-                    <tr>
-                     <td>Item B</td>
-                    <td>       </td>
-                    <td>       </td>
-                    </tr>
-                    <tr>
-                        <td>Item C </td>
-                        <td>       </td>
-                        <td>       </td>
-                    </tr>
-                    <tr>
-                        <td>Item D </td>
-                        <td>       </td>
-                        <td>       </td>
-                    </tr>
-                    <tr>
-                        <td>        </td>
-                        <td> Total  </td>
-                        <td>   $$0  </td>
-                    </tr>
-                    </table>
+            <tr>
+                <td>Mousse</td>
+                <td><input name="qnt_3" type="text" id="qnt_3" value="0" size="3" data-price="30"/></td>
+                <td>€30</td>
+            </tr>
+            <tr>
+                <td>Vegan cake</td>
+                <td><input name="qnt_4" type="text" id="qnt_4" value="0" size="3" data-price="24"/></td>
+                <td>€24</td>
+            </tr>
+            <tr>
+                <td class="total">&nbsp;</td>
+                <td class="total right"><strong>Total:</strong></td>
+                <td class="total"><strong>
+                        <div id="ItemsTotal">€0</div>
+                    </strong></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th>Drinks</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            <tr>
+                <td>Desserts</td>
+                <td>
+                    <input name="qnt_1" type="text" id="qnt_1" value="0" size="3" data-price="100"/></td>
+                <td>€100</td>
+            </tr>
+            <tr>
+                <td>Petit Gatteau</td>
+                <td><input name="qnt_2" type="text" id="qnt_2" value="0" size="3" data-price="50"/></td>
+                <td>€50</td>
+            </tr>
+            <tr>
+                <td>Mousse</td>
+                <td><input name="qnt_3" type="text" id="qnt_3" value="0" size="3" data-price="30"/></td>
+                <td>€30</td>
+            </tr>
+            <tr>
+                <td>Vegan cake</td>
+                <td><input name="qnt_4" type="text" id="qnt_4" value="0" size="3" data-price="24"/></td>
+                <td>€24</td>
+            </tr>
+            <tr>
+                <td class="total">&nbsp;</td>
+                <td class="total right"><strong>Total:</strong></td>
+                <td class="total"><strong>
+                        <div id="ItemsTotal">€0</div>
+                    </strong></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                
+                <th>Desserts</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            <tr>
+                <td>Desserts</td>
+                <td>
+                    <input name="qnt_1" type="text" id="qnt_1" value="0" size="3" data-price="100"/></td>
+                <td>€100</td>
+            </tr>
+            <tr>
+                <td>Petit Gatteau</td>
+                <td><input name="qnt_2" type="text" id="qnt_2" value="0" size="3" data-price="50"/></td>
+                <td>€50</td>
+            </tr>
+            <tr>
+                <td>Mousse</td>
+                <td><input name="qnt_3" type="text" id="qnt_3" value="0" size="3" data-price="30"/></td>
+                <td>€30</td>
+            </tr>
+            <tr>
+                <td>Vegan cake</td>
+                <td><input name="qnt_4" type="text" id="qnt_4" value="0" size="3" data-price="24"/></td>
+                <td>€24</td>
+            </tr>
+            <tr>
+                <td class="total">&nbsp;</td>
+                <td class="total right"><strong>Total:</strong></td>
+                <td class="total"><strong>
+                        <div id="ItemsTotal">€0</div>
+                    </strong></td>
+            </tr>
+        </table>
+        
+        
+                    <script>
+                        var total_items = 4;
+                        function CalculateItemsValue(){
+                            var total = 0;
+                
+                            
+                        };
+                
+                    </script>
+                    
         </body>
