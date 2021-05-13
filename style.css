@@ -113,4 +113,11 @@ background-color: white;
         width: 300px;
         
     }
+    
+.output {
+    width: 25px;
+    height: 5px;
+    margin: 5px;
+    background-color: white;  
+}
 

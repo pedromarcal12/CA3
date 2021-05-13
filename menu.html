@@ -67,29 +67,29 @@
             <tr>
                 <td>Desserts</td>
                 <td>
-                    <input name="qnt_1" type="text" id="qnt_1" value="0" size="3" data-price="100"/></td>
+                    <input name="qnt_5" type="text" id="qnt_1" value="0" size="3" data-price="100"/></td>
                 <td>€100</td>
             </tr>
             <tr>
                 <td>Petit Gatteau</td>
-                <td><input name="qnt_2" type="text" id="qnt_2" value="0" size="3" data-price="50"/></td>
+                <td><input name="qnt_6" type="text" id="qnt_2" value="0" size="3" data-price="50"/></td>
                 <td>€50</td>
             </tr>
             <tr>
                 <td>Mousse</td>
-                <td><input name="qnt_3" type="text" id="qnt_3" value="0" size="3" data-price="30"/></td>
+                <td><input name="qnt_7" type="text" id="qnt_3" value="0" size="3" data-price="30"/></td>
                 <td>€30</td>
             </tr>
             <tr>
                 <td>Vegan cake</td>
-                <td><input name="qnt_4" type="text" id="qnt_4" value="0" size="3" data-price="24"/></td>
+                <td><input name="qnt_8" type="text" id="qnt_4" value="0" size="3" data-price="24"/></td>
                 <td>€24</td>
             </tr>
             <tr>
                 <td class="total">&nbsp;</td>
                 <td class="total right"><strong>Total:</strong></td>
                 <td class="total"><strong>
-                        <div id="ItemsTotal">€0</div>
+                        <div id="ItemsTotal2">€0</div>
                     </strong></td>
             </tr>
         </table>
@@ -102,29 +102,29 @@
             <tr>
                 <td>Desserts</td>
                 <td>
-                    <input name="qnt_1" type="text" id="qnt_1" value="0" size="3" data-price="100"/></td>
+                    <input name="qnt_9" type="text" id="qnt_1" value="0" size="3" data-price="100"/></td>
                 <td>€100</td>
             </tr>
             <tr>
                 <td>Petit Gatteau</td>
-                <td><input name="qnt_2" type="text" id="qnt_2" value="0" size="3" data-price="50"/></td>
+                <td><input name="qnt_10" type="text" id="qnt_2" value="0" size="3" data-price="50"/></td>
                 <td>€50</td>
             </tr>
             <tr>
                 <td>Mousse</td>
-                <td><input name="qnt_3" type="text" id="qnt_3" value="0" size="3" data-price="30"/></td>
+                <td><input name="qnt_11" type="text" id="qnt_3" value="0" size="3" data-price="30"/></td>
                 <td>€30</td>
             </tr>
             <tr>
                 <td>Vegan cake</td>
-                <td><input name="qnt_4" type="text" id="qnt_4" value="0" size="3" data-price="24"/></td>
+                <td><input name="qnt_12" type="text" id="qnt_4" value="0" size="3" data-price="24"/></td>
                 <td>€24</td>
             </tr>
             <tr>
                 <td class="total">&nbsp;</td>
                 <td class="total right"><strong>Total:</strong></td>
                 <td class="total"><strong>
-                        <div id="ItemsTotal">€0</div>
+                        <div id="ItemsTotal3">€0</div>
                     </strong></td>
             </tr>
         </table>
@@ -138,29 +138,29 @@
             <tr>
                 <td>Desserts</td>
                 <td>
-                    <input name="qnt_1" type="text" id="qnt_1" value="0" size="3" data-price="100"/></td>
+                    <input name="qnt_13" type="text" id="qnt_1" value="0" size="3" data-price="100"/></td>
                 <td>€100</td>
             </tr>
             <tr>
                 <td>Petit Gatteau</td>
-                <td><input name="qnt_2" type="text" id="qnt_2" value="0" size="3" data-price="50"/></td>
+                <td><input name="qnt_14" type="text" id="qnt_2" value="0" size="3" data-price="50"/></td>
                 <td>€50</td>
             </tr>
             <tr>
                 <td>Mousse</td>
-                <td><input name="qnt_3" type="text" id="qnt_3" value="0" size="3" data-price="30"/></td>
+                <td><input name="qnt_15" type="text" id="qnt_3" value="0" size="3" data-price="30"/></td>
                 <td>€30</td>
             </tr>
             <tr>
                 <td>Vegan cake</td>
-                <td><input name="qnt_4" type="text" id="qnt_4" value="0" size="3" data-price="24"/></td>
+                <td><input name="qnt_16" type="text" id="qnt_4" value="0" size="3" data-price="24"/></td>
                 <td>€24</td>
             </tr>
             <tr>
                 <td class="total">&nbsp;</td>
                 <td class="total right"><strong>Total:</strong></td>
                 <td class="total"><strong>
-                        <div id="ItemsTotal">€0</div>
+                        <div id="ItemsTotal4">€0</div>
                     </strong></td>
             </tr>
         </table>
@@ -168,11 +168,63 @@
         
                     <script>
                         var total_items = 4;
-                        function CalculateItemsValue(){
-                            var total = 0;
-                
-                            
-                        };
+
+function CalculateItemsValue(){
+    var total = 0;
+
+    for (let i = 1; i <= total_items; i++) {
+       itemID =document.getElementById("qnt_" + i);
+       total = total + parseInt(itemID.value) * parseInt(itemID.getAttribute("data-price"));
+        
+    }
+    document.getElementById('ItemsTotal').innerHTML = "€" + total;
+}
+
+document.querySelectorAll('[id^="qnt_"]').forEach(item => {
+    item.addEventListener('keyup', CalculateItemsValue);
+});
+function CalculateItemsStarter(){
+  var total = 0;
+
+  for (let i = 1; i <= total_items; i++) {
+     itemID =document.getElementById("qnt_5" + "qnt_6" + "qnt_7" + "qnt_8");
+     total2 = total + parseInt(itemID.value) * parseInt(itemID.getAttribute("data-price"));
+      
+  }
+  document.getElementById('ItemsTotal2').innerHTML = "€" + total2;
+}
+
+document.querySelectorAll('[id^="qnt_"]').forEach(item => {
+  item.addEventListener('keyup', CalculateItemsStarter);
+});
+function CalculateItemsDesserts(){
+var total = 0;
+
+for (let i = 1; i <= total_items; i++) {
+   itemID =document.getElementById("qnt_9" + "qnt_10" + "qnt_11" + "qnt_12");
+   total3 = total + parseInt(itemID.value) * parseInt(itemID.getAttribute("data-price"));
+    
+}
+document.getElementById('ItemsTotal3').innerHTML = "€" + total3;
+}
+
+document.querySelectorAll('[id^="qnt_"]').forEach(item => {
+item.addEventListener('keyup', CalculateItemsDesserts);
+});
+function CalculateItemsDrink(){
+var total = 0;
+
+for (let i = 1; i <= total_items; i++) {
+ itemID =document.getElementById("qnt_13" + "qnt_14" + "qnt_15" + "qnt_16");
+ total4 = total + parseInt(itemID.value) * parseInt(itemID.getAttribute("data-price"));
+  
+}
+document.getElementById('ItemsTotal4').innerHTML = "€" + total4;
+}
+
+document.querySelectorAll('[id^="qnt_"]').forEach(item => {
+item.addEventListener('keyup', CalculateItemsDrink);
+});
                 
                     </script>
                     

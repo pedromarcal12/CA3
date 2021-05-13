@@ -1,53 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Pedro's Take Away - CA3</title>
     <link rel= "stylesheet" href= "style.css">
-    
 </head>
 <body>
-    <nav>
-    <div class = "logo">
-<h4>Pedro's Take away</h4>
-    </div>
-    <ul class = "nav-links">
-        <li>
-            <a href = "index.html">Home</a>
-        </li>
-        <li>
-            <a href = "menu.html">Menu</a>
-        </li>
-        <li>
-            <a href="mypage.html">About us</a>
-        </li>        
-    </ul>
-    <div class = "burguer">
-        <div class = "line1"></div>
-        <div class = "line2"></div>
-    </div>
-    </nav>
-<div class = container>
-    <script src="code.js"></script>
-<form action="/action_page.php">
-<label for = "usname"> Username </label>
-<input type = "text" id="usname" name="usname" required>
-<label for = "psw"> Password </label>
-<input type = "password" id = "psw" name="psw" pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-title = "Your password must have one character especial, one number, one upper and lowercase letter and at least 8 digits." required>
-<input type = "submit" value = "Submit">
-</form>
-<div id = "message">
-<h3>Password must have:</h3>
-<p id = "letter" class = "invalid">A <b>lowercase</b>letter</p>
-<p id = "capital" class = "invalid"> A <b>capital</b>letter</p>
-<p id = "number" class = "invalid"> A <b>number </b></p>
-<p id = "length" class = "invalid">At least <b> eight </b> characteres</p>
-</div>
-</div> 
-<button id = "getUsers">Examples of random user</button>
-<script>
-    document.getElementById("getUser").addEventListener('click', getUsers);
-</script>
+    
 
+    
+    <nav>
+        <div class = "logo">
+    <h4>Pedro's Take away</h4>
+        </div>
+        <ul class = "nav-links">
+            <li>
+                <button> <a href = "index.html">Home</a></button>
+            </li>
+            <li>
+                <button><a href = "menu.html">Menu</a></button>
+            </li>
+            <li>
+                <button><a href="mypage.html">About us</a></button>
+            </li>  
+           
+            
+                    
+            
+               
+        </ul>
+         </div>
+         <div class = "burguer">
+            <div class = "line1"></div>
+            <div class = "line2"></div>
+            
+           
+        </div>
+        </nav>
+    <div class = container>
+        <script src="code.js"></script>
+    <form action="/action_page.php">
+    <label for = "usname"> Username </label>
+    <input type = "text" id="usname" name="usname" required>
+    <label for = "psw"> Password </label>
+    <input type = "password" id = "psw" name="psw" pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+    title = "Your password must have one character especial, one number, one upper and lowercase letter and at least 8 digits." required>
+    <input type = "submit" value = "Submit">
+ </form>
+      <button class="btn btn-info mr-4" id="getRandom">Get Random User </button>
+                <div id="output"></div>
+    <div id = "message">
+    <h3>Password must have:</h3>
+    <p id = "letter" class = "invalid">A <b>lowercase</b>letter</p>
+    <p id = "capital" class = "invalid"> A <b>capital</b>letter</p>
+    <p id = "number" class = "invalid"> A <b>number </b></p>
+    <p id = "length" class = "invalid">At least <b> eight </b> characteres</p>
+    </div>
+<script>
+    document.getElementById('getRandom').addEventListener('click', getRandom);
+      
+    function getRandom(){
+        fetch('https://randomuser.me/api/?results=5%27')
+        .then((res) => res.json())
+        .then((data) => {
+            let author = data.results;
+            let output = '<h2>Random Users:</h2>'
+            console.log(data);
+            author.forEach(function(user){
+                output += `
+                <div>
+        <ul>
+            <li><img src = ${user.picture.medium}> </li>
+            <li>${user.name.first} ${user.name.last}</li>
+            <li>${user.email} </li>
+            <li>${user.gender} </li>
+            <li>${user.phone} </li>
+            <li>${user.location.city}</li>
+
+        </ul>
+    </div>
+                `
+            });
+
+            document.getElementById('output').innerHTML = output;
+        })
+    }
+</script>
+    
+    
+    
+    
+    </body>
+    </html>   
+
+    
 </body>
 </html>
