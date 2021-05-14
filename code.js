@@ -59,4 +59,9 @@ var faker = require('faker'); // Faker.js library
 api.username = faker.internet.userName();
 api.password = faker.internet.password();
 
+function myFunction() {
+  var x = document.getElementById("demo");
+  x.style.fontSize = "25px";
+  x.style.color = "red";
+}
 

@@ -11,18 +11,21 @@
 <h4>Pedro Take away</h4>
     </div>
     <ul class = "nav-links">
-        <li>
-            <a href = "#">Home</a>
-        </li>
-        <li>
-            <a href = "#">Menu</a>
-        </li>
-    </ul>
-    <div class = "burguer">
-        <div class = "line1"></div>
-        <div class = "line2"></div>
-    </div>
-    </nav>
+                    <li>
+                    <button><a href = "index.html">Home</a></button>
+                    </li>
+                    <li>
+                    <button><a href = "menu.html">Menu</a></button>
+                    </li>
+                    <li>
+                    <button><a href="mypage.html">About us</a></button>
+                    </li>        
+                </ul>
+               <div class = "burguer">
+                    <div class = "line1"></div>
+                    <div class = "line2"></div>
+                </div>
+                </nav>
 
     <table>
             <tr>
@@ -30,7 +33,7 @@
                 <th>Quantity</th>
                 <th>Price</th>
             <tr>
-                <td>Chicken fingers</td>
+                <td>Chicken fingers </td>
                 <td>
                     <input name="qnt_1" type="text" id="qnt_1" value="0" size="3" data-price="100"/></td>
                 <td>€100</td>
@@ -170,10 +173,10 @@
                         var total_items = 4;
 
 function CalculateItemsValue(){
-    var total = 0;
+    let total = 0;
 
     for (let i = 1; i <= total_items; i++) {
-       itemID =document.getElementById("qnt_" + i);
+       itemID =document.getElementById("qnt_" +i);
        total = total + parseInt(itemID.value) * parseInt(itemID.getAttribute("data-price"));
         
     }
@@ -184,10 +187,10 @@ document.querySelectorAll('[id^="qnt_"]').forEach(item => {
     item.addEventListener('keyup', CalculateItemsValue);
 });
 function CalculateItemsStarter(){
-  var total = 0;
+  let total = 0;
 
   for (let i = 1; i <= total_items; i++) {
-     itemID =document.getElementById("qnt_5" + "qnt_6" + "qnt_7" + "qnt_8");
+     itemID =document.getElementById("qnt_5", "qnt_6", "qnt_7", "qnt_8");
      total2 = total + parseInt(itemID.value) * parseInt(itemID.getAttribute("data-price"));
       
   }
@@ -198,10 +201,10 @@ document.querySelectorAll('[id^="qnt_"]').forEach(item => {
   item.addEventListener('keyup', CalculateItemsStarter);
 });
 function CalculateItemsDesserts(){
-var total = 0;
+let total = 0;
 
 for (let i = 1; i <= total_items; i++) {
-   itemID =document.getElementById("qnt_9" + "qnt_10" + "qnt_11" + "qnt_12");
+   itemID =document.getElementById("qnt_9" , "qnt_10" , "qnt_11" , "qnt_12");
    total3 = total + parseInt(itemID.value) * parseInt(itemID.getAttribute("data-price"));
     
 }
@@ -212,10 +215,10 @@ document.querySelectorAll('[id^="qnt_"]').forEach(item => {
 item.addEventListener('keyup', CalculateItemsDesserts);
 });
 function CalculateItemsDrink(){
-var total = 0;
+let total = 0;
 
 for (let i = 1; i <= total_items; i++) {
- itemID =document.getElementById("qnt_13" + "qnt_14" + "qnt_15" + "qnt_16");
+ itemID =document.getElementById("qnt_13" , "qnt_14" , "qnt_15" , "qnt_16");
  total4 = total + parseInt(itemID.value) * parseInt(itemID.getAttribute("data-price"));
   
 }
